@@ -1,22 +1,17 @@
-[org 0x7C00]
-bits 16
+#include <efi.h>
+#include <efilib.h>
 
-start:
-    mov si, message
+EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
+{
+    InitializeLib(ImageHandle, SystemTable);
 
-print:
-    lodsb
-    cmp al, 0
-    je hang
+    Print(L"NexoOS build 000.001\n");
+    Print(L"UEFI bootloader gestart.\n");
 
-    mov ah, 0x0E
-    int 0x10
-    jmp print
+    while (1)
+    {
+        __asm__("hlt");
+    }
 
-hang:
-    jmp hang
-
-message db "NexoOS bootloader gestart!",0
-
-times 510-($-$$) db 0
-dw 0xAA55
+    return EFI_SUCCESS;
+}
