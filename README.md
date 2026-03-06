@@ -7,4 +7,9 @@ we are starting with this project today (4-3-2026) and we would like your full a
 - updates are being rolled out every week, with our without documemtation.
 - all updates are only available in the USA and the Netherlands, coming globally in 2030
 
+# latest update changelog
+build 000.001:
+- we updated the minimum specifications for the OS (every 10 builds)
+
+
 # THANKS for reading
