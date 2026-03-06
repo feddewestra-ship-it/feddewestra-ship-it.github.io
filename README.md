@@ -10,6 +10,9 @@ we are starting with this project today (4-3-2026) and we would like your full a
 # latest update changelog
 build 000.001:
 - we updated the minimum specifications for the OS (every 10 builds)
+- changed boot.asm to boot.c
+- maked instead of BIOS now UEFI (faster boot)
+- minimum specification check inside boot.c
 
 
 # THANKS for reading
