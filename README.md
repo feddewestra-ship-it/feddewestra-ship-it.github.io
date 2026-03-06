@@ -13,6 +13,7 @@ build 000.001:
 - changed boot.asm to boot.c
 - maked instead of BIOS now UEFI (faster boot)
 - minimum specification check inside boot.c
+- lesser then 128MB RAM? boot will fail immediatly (boot.c)
 
 
 # THANKS for reading
